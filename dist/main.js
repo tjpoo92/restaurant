@@ -1,1 +1,1 @@
-alert("suck it");
+alert("you smell");
