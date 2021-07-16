@@ -16,7 +16,7 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _pages_home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pages/home */ \"./src/pages/home.js\");\n/* harmony import */ var _pages_menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pages/menu */ \"./src/pages/menu.js\");\n/* harmony import */ var _pages_menu__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_pages_menu__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _pages_contact_us__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/contact-us */ \"./src/pages/contact-us.js\");\n/* harmony import */ var _pages_contact_us__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_pages_contact_us__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n\n(0,_pages_home__WEBPACK_IMPORTED_MODULE_0__.default)();\n// menuRender(content);\n// contactUsRender(content);\n\n\n//# sourceURL=webpack://restaurant/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _pages_home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pages/home */ \"./src/pages/home.js\");\n/* harmony import */ var _pages_menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pages/menu */ \"./src/pages/menu.js\");\n/* harmony import */ var _pages_contact_us__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/contact-us */ \"./src/pages/contact-us.js\");\n/* harmony import */ var _pages_contact_us__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_pages_contact_us__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n\nconst home = document.querySelector(\".home\");\nhome.addEventListener(\"click\", _pages_home__WEBPACK_IMPORTED_MODULE_0__.homeRender);\n\nconst menu = document.querySelector(\".menu\");\nmenu.addEventListener(\"click\", _pages_menu__WEBPACK_IMPORTED_MODULE_1__.menuRender);\n\n// contactUsRender(content);\n\n\n//# sourceURL=webpack://restaurant/./src/index.js?");
 
 /***/ }),
 
@@ -37,7 +37,7 @@ eval("\n\n//# sourceURL=webpack://restaurant/./src/pages/contact-us.js?");
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst content = document.querySelector(\"#content\");\n\nlet homeRender = (function () {\n\t//DOM/Node Creation\n\tconst h1 = document.createElement(\"h1\");\n\tconst br = document.createElement(\"br\");\n\tconst p = document.createElement(\"p\");\n\tconst name = document.createTextNode(\"Dairy Joe's on West O!\");\n\tconst tag = document.createTextNode(\"Come by from some ice cream or coffee\");\n\tconst months = document.createTextNode(\"Open March - October\");\n\tconst sunThur = document.createTextNode(\"Sun - Thur 10:30 AM - 9:30 PM\");\n\tconst friSat = document.createTextNode(\"Fri/Sat 10:30 AM - 10:30 PM\");\n\n\tcontent\n\t\t.appendChild(h1)\n\t\t.appendChild(name)\n\t\t.insertBefore(br, null)\n\t\t.insertAdjacentElement(\"afterend\", p)\n\t\t.appendChild(tag)\n\t\t.insertAdjacentElement(\"afterend\", br)\n\t\t.insertAdjacentElement(\"afterend\", p)\n\t\t.appendChild(months)\n\t\t.insertAdjacentElement(\"afterend\", p)\n\t\t.appendChild(sunThur)\n\t\t.insertAdjacentElement(\"afterend\", p)\n\t\t.appendChild(friSat);\n})();\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (homeRender);\n\n\n//# sourceURL=webpack://restaurant/./src/pages/home.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"homeRender\": () => (/* binding */ homeRender)\n/* harmony export */ });\nlet homeRender = (function () {\n\tconst content = document.querySelector(\"#content\");\n\n\t// while (content.hasChildNodes()) {\n\t// \tcontent.removeChild(content.firstChild);\n\t// }\n\n\t//DOM/Node Creation\n\tconst h1 = document.createElement(\"h1\");\n\tconst br = document.createElement(\"br\");\n\tconst pTag = document.createElement(\"p\");\n\tconst pMonths = document.createElement(\"p\");\n\tconst pDayTime = document.createElement(\"p\");\n\n\th1.textContent = \"Dairy Joe's on West O!\";\n\tpTag.textContent = \"Come by for some ice cream and coffee\";\n\tpMonths.textContent = \"Open March - October\";\n\tpDayTime.textContent = \"Tues - Sun 10:30 AM - 9:30 PM\";\n\n\tcontent\n\t\t.appendChild(h1)\n\t\t.insertAdjacentElement(\"afterend\", br)\n\t\t.insertAdjacentElement(\"afterend\", pTag)\n\t\t.insertAdjacentElement(\"afterend\", br)\n\t\t.insertAdjacentElement(\"afterend\", pMonths)\n\t\t.insertAdjacentElement(\"afterend\", pDayTime);\n})();\n\n\n\n\n//# sourceURL=webpack://restaurant/./src/pages/home.js?");
 
 /***/ }),
 
@@ -45,9 +45,10 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /*!***************************!*\
   !*** ./src/pages/menu.js ***!
   \***************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("\n\n//# sourceURL=webpack://restaurant/./src/pages/menu.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"menuRender\": () => (/* binding */ menuRender)\n/* harmony export */ });\nlet menuRender = (function () {\n\tconst content = document.querySelector(\"#content\");\n\n\t// while (content.hasChildNodes()) {\n\t// \tcontent.removeChild(content.firstChild);\n\t// }\n\tconsole.log(\"I'm a menu!\");\n})();\n\n\n\n\n//# sourceURL=webpack://restaurant/./src/pages/menu.js?");
 
 /***/ })
 
