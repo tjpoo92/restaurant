@@ -1,10 +1,16 @@
-let menuRender = (function () {
+let menuRender = function () {
 	const content = document.querySelector("#content");
+	const home = document.querySelector(".home");
+	const menu = document.querySelector(".menu");
+	const contactUs = document.querySelector(".contact-us");
 
-	// while (content.hasChildNodes()) {
-	// 	content.removeChild(content.firstChild);
-	// }
-	console.log("I'm a menu!");
-})();
+	home.classList.remove("active");
+	contactUs.classList.remove("active");
+	menu.classList.add("active");
+
+	while (content.hasChildNodes()) {
+		content.removeChild(content.firstChild);
+	}
+};
 
 export { menuRender };
