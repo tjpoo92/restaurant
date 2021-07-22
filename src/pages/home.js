@@ -15,20 +15,25 @@ let homeRender = function () {
 	// DOM/Node Creation
 	const h1 = document.createElement("h1");
 	const br = document.createElement("br");
-	const pTag = document.createElement("p");
-	const pMonths = document.createElement("p");
-	const pDayTime = document.createElement("p");
 	h1.textContent = "Dairy Joe's on West O!";
-	pTag.textContent = "Come by for some ice cream and coffee";
-	pMonths.textContent = "Open March - October";
-	pDayTime.textContent = "Tues - Sun 10:30 AM - 9:30 PM";
-	content
-		.appendChild(h1)
-		.insertAdjacentElement("afterend", br)
-		.insertAdjacentElement("afterend", pTag)
-		.insertAdjacentElement("afterend", br)
-		.insertAdjacentElement("afterend", pMonths)
-		.insertAdjacentElement("afterend", pDayTime);
+
+	function createHomeTags(tagString) {
+		const createdElement = document.createElement("p");
+		createdElement.textContent = tagString;
+		return createdElement;
+	}
+
+	content.appendChild(h1).insertAdjacentElement("afterend", br);
+
+	br.insertAdjacentElement(
+		"afterend",
+		createHomeTags("Tues - Sun 10:30 AM - 9:30 PM")
+	);
+	br.insertAdjacentElement("afterend", createHomeTags("Open March - October"));
+	br.insertAdjacentElement(
+		"afterend",
+		createHomeTags("Come by for some ice cream and coffee")
+	);
 };
 
 export { homeRender };

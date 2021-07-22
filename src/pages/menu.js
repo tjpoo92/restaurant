@@ -14,58 +14,51 @@ let menuRender = function () {
 
 	// DOM/Node Creation
 	const table = document.createElement("table");
-	const tr1 = document.createElement("tr");
-	const tr2 = document.createElement("tr");
-	const tr3 = document.createElement("tr");
-	const tr4 = document.createElement("tr");
-	const tr5 = document.createElement("tr");
-	const thDairy = document.createElement("th");
-	const thJoe = document.createElement("th");
-	const tdDairy1 = document.createElement("td");
-	const tdDairy2 = document.createElement("td");
-	const tdDairy3 = document.createElement("td");
-	const tdDairy4 = document.createElement("td");
-	const tdJoe1 = document.createElement("td");
-	const tdJoe2 = document.createElement("td");
-	const tdJoe3 = document.createElement("td");
-	const tdJoe4 = document.createElement("td");
 
-	thDairy.textContent = "Dairy";
-	thJoe.textContent = "Joe";
-	tdDairy1.textContent = "$1 Single Scoop";
-	tdDairy2.textContent = "$3 Double Scoop";
-	tdDairy3.textContent = "$4 Milkshake";
-	tdDairy4.textContent = "Ice cream flavors change monthly";
-	tdJoe1.textContent = "$1 Coffee";
-	tdJoe2.textContent = "$3 Latte";
-	tdJoe3.textContent = "$2 Iced Coffee";
-	tdJoe4.textContent = "Vanilla, Hazelnut, and more";
+	function createHeader(headerText) {
+		const th = document.createElement("th");
+		th.textContent = headerText;
+		return th;
+	}
+	function createRow() {
+		const tr = document.createElement("tr");
+		return tr;
+	}
+
+	function createCell(cellText) {
+		const td = document.createElement("td");
+		td.textContent = cellText;
+		return td;
+	}
 
 	content
 		.appendChild(table)
-		.appendChild(tr1)
-		.appendChild(thDairy)
-		.insertAdjacentElement("afterend", thJoe);
+		.appendChild(createRow())
+		.appendChild(createHeader("Dairy"))
+		.insertAdjacentElement("afterend", createHeader("Joe"));
 
 	table
-		.appendChild(tr2)
-		.appendChild(tdDairy1)
-		.insertAdjacentElement("afterend", tdJoe1);
+		.appendChild(createRow())
+		.appendChild(createCell("$1 Single Scoop"))
+		.insertAdjacentElement("afterend", createCell("$1 Coffee"));
 
 	table
-		.appendChild(tr3)
-		.appendChild(tdDairy2)
-		.insertAdjacentElement("afterend", tdJoe2);
+		.appendChild(createRow())
+		.appendChild(createCell("$3 Double Scoop"))
+		.insertAdjacentElement("afterend", createCell("$3 Latte"));
 
 	table
-		.appendChild(tr4)
-		.appendChild(tdDairy3)
-		.insertAdjacentElement("afterend", tdJoe3);
+		.appendChild(createRow())
+		.appendChild(createCell("$4 Milkshake"))
+		.insertAdjacentElement("afterend", createCell("$2 Iced Coffee"));
 
 	table
-		.appendChild(tr5)
-		.appendChild(tdDairy4)
-		.insertAdjacentElement("afterend", tdJoe4);
+		.appendChild(createRow())
+		.appendChild(createCell("Ice cream flavors change monthly"))
+		.insertAdjacentElement(
+			"afterend",
+			createCell("Vanilla, Hazelnut, and more")
+		);
 };
 
 export { menuRender };
