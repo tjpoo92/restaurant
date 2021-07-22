@@ -13,7 +13,7 @@ header img {
 }
 
 body {
-	background-color: whitesmoke;
+	background-color: #9e856e;
 }
 
 main {
@@ -62,7 +62,7 @@ footer > p {
 
 footer > p > a {
 	text-decoration: none;
-	color: rgb(109, 109, 109);
+	color: rgb(167, 167, 167);
 }
 
 h1 {
@@ -91,7 +91,7 @@ h3 {
 }
 
 .tab button:hover {
-	background-color: #ddd;
+	background-color: #a49c8c;
 }
 
 .tab button.active {
